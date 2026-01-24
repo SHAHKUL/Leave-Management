@@ -1,0 +1,31 @@
+@import "tailwindcss";
+
+@layer base {
+  body {
+    @apply bg-gradient-to-br from-indigo-500 via-purple-500 to-pink-500 min-h-screen text-slate-800 font-sans antialiased;
+  }
+}
+
+@layer components {
+  .glass-panel {
+    @apply bg-white/95 backdrop-blur-xl border border-white/50 shadow-2xl;
+  }
+
+  .btn-primary {
+    @apply w-full flex justify-center py-3 px-4 border border-transparent rounded-lg shadow-lg text-sm font-bold text-white bg-gradient-to-r from-indigo-600 to-pink-600 hover:from-indigo-700 hover:to-pink-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 transform transition-all duration-200 hover:scale-[1.02];
+  }
+
+  .input-field {
+    @apply appearance-none block w-full px-4 py-3 border-2 border-indigo-100 rounded-lg shadow-sm placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent sm:text-sm bg-indigo-50/30 transition-all duration-200 text-gray-900;
+  }
+
+  /* Container for the Auth Card to ensure it pops with color */
+  .auth-card-container {
+    @apply relative bg-white/90 backdrop-blur-lg py-10 px-6 shadow-2xl sm:rounded-2xl sm:px-12 border-t-8 border-indigo-500;
+  }
+
+  /* Full screen centering container */
+  .auth-layout {
+    @apply min-h-screen w-full flex flex-col justify-center items-center p-4;
+  }
+}
