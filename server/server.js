@@ -32,6 +32,10 @@ app.use("/api/leave-types", leaveTypeRoutes);
 app.use("/api/leave-balance", leaveBalanceRoutes);
 
 // Error handler
+
+app.get('/',(req,res)=>{
+  res.status(500).json({message:"server running successfully"})
+})
 app.use((err, req, res, next) => {
   console.error(err);
   res.status(500).json({ message: "Internal server error" });
