@@ -17,8 +17,8 @@ app.use(express.json());
 mongoose
   .connect(process.env.URL)
   .then(() => {
-    app.listen(process.env.Port, () => {
-      console.log("Server connected on port", process.env.Port);
+    app.listen(process.env.PORT, () => {
+      console.log("Server connected on port", process.env.PORT);
     });
   })
   .catch((err) => {
